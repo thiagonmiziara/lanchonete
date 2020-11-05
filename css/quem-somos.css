@@ -41,3 +41,25 @@
     font-weight: 300;
     line-height: 3rem;
 }
+
+@media screen and (max-width:768px) {
+    .quem-somos {
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-titulo,
+    .banner-descricao {
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-descricao p {
+        width: 80%;
+        margin-left: 2.5rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .quem-somos {
+        display: none;
+    }
+}

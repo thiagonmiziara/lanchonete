@@ -27,3 +27,24 @@ header {
     width: 10%;
     height: 20%;
 }
+
+@media screen and (max-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        display: block;
+    }
+    .container-logo {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-h1 {
+        font-size: 2rem;
+    }
+    .logo-prime {
+        width: 10%;
+        height: 20%;
+    }
+}
