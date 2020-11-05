@@ -1,0 +1,19 @@
+@import './reset.css';
+@import './normalize.css';
+@import './header.css';
+@import './nav.css';
+@import './cardapio.css';
+@import './quem-somos.css';
+@import './contato.css';
+@import './footer.css';
+@import './mapa.css';
+@import './cards.css';
+@import './modal.css';
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    background: black;
+}

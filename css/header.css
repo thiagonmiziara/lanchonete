@@ -1,0 +1,29 @@
+:root {
+    font-size: 62.5%;
+}
+
+header {
+    width: 100%;
+    background: black;
+    height: 10rem;
+}
+
+.logo-h1 {
+    font-size: 3rem;
+    color: #fb5;
+    margin-left: 1.5rem;
+    margin-top: 3.2rem;
+    font-weight: bold;
+}
+
+.container-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-prime {
+    width: 10%;
+    height: 20%;
+}

@@ -1,0 +1,108 @@
+.submenu-burguer,
+.submenu-refri,
+.submenu-sucos,
+.submenu-porcoes {
+    display: none;
+}
+
+.submenu-burguer.ativo {
+    display: flex;
+    width: 100%;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: show-right 1s forwards;
+}
+
+.submenu-refri.ativo {
+    display: flex;
+    width: 100%;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: show-left 1s forwards;
+}
+
+.submenu-sucos.ativo {
+    display: flex;
+    width: 100%;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: show-right 1s forwards;
+}
+
+.submenu-porcoes.ativo {
+    display: flex;
+    width: 100%;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: show-left 1s forwards;
+}
+
+.titulo-h4 {
+    font-size: 3rem;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+img {
+    margin-top: 1rem;
+    border-radius: 100%;
+    width: 10rem;
+    height: 10rem;
+}
+
+.descricao-burger {
+    font-size: 3rem;
+    color: white;
+    margin-top: 1rem;
+    color: white;
+}
+
+.btn-burguer {
+    width: 13rem;
+    height: 5rem;
+    border: 0;
+    border-radius: 20rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+@keyframes show-right {
+    from {
+        opacity: 0;
+        transform: translate3d(-160px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes show-left {
+    from {
+        opacity: 0;
+        transform: translate3d(160px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.menu-burguer,
+.menu-refri,
+.menu-sucos,
+.menu-porcoes {
+    width: 100%;
+    display: flex;
+}

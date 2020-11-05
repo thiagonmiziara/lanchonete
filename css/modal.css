@@ -1,0 +1,124 @@
+    .modal-container {
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, .5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-container.active {
+        display: flex;
+    }
+    
+    .modal {
+        width: 80%;
+        min-width: 300px;
+        background: black;
+        padding: 40px;
+        border: 10px solid #fb5;
+        box-shadow: 0 0 0 10px white;
+        position: relative;
+    }
+    
+    .titulo-modal {
+        font-size: 4rem;
+        color: #fb5;
+    }
+    
+    .btn-confirmar {
+        height: 7rem;
+        width: 20rem;
+        margin: 2rem;
+        font-size: 2rem;
+        border-radius: 10px;
+        color: #fb5;
+        cursor: pointer;
+        background: transparent;
+        border: 2px solid #fb5;
+    }
+    
+    .container-flex {
+        display: flex;
+        font-size: 3rem;
+        color: white;
+        align-items: center;
+        margin: 1rem;
+    }
+    
+    .btn-confirmar:hover {
+        font-weight: bold;
+        border: 1px solid;
+        animation: show-background 1s forwards;
+    }
+    
+    @keyframes show-background {
+        from {
+            background: black;
+            color: #fb5;
+            transform: translate3d(0, -1px, 0);
+        }
+        to {
+            background: #fb5;
+            color: black;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    
+    .fechar-modal {
+        background: #fb5;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        box-shadow: 0 4px 4px 0 regba(0, 0, 0, .3);
+        font-size: 2rem;
+        color: black;
+        cursor: pointer;
+    }
+    
+    .modal h1 {
+        font-size: 3rem;
+        color: #fb5;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .lista {
+        width: 100%;
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .btnMenos,
+    .btnMais {
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        font-size: 2rem;
+        border-radius: 2px;
+        color: #fb5;
+        cursor: pointer;
+        background: transparent;
+        border: 2px solid #fb5;
+    }
+    
+    .btnMenos:hover {
+        background: #fb5;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .btnMais:hover {
+        background: #fb5;
+        color: black;
+        font-weight: bold;
+    }

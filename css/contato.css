@@ -1,0 +1,43 @@
+    .contato {
+        width: 100%;
+        display: flex;
+        margin-top: 1rem;
+        justify-content: space-between;
+    }
+    
+    .contato .titulo {
+        font-size: 4.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: #fb5;
+    }
+    
+    .descricao {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .contato-lista ul {
+        font-size: 2rem;
+        color: #fb5;
+        text-align: justify;
+    }
+    
+    .contato-lista li {
+        line-height: 4.3rem;
+    }
+    
+    table {
+        display: flex;
+        flex-direction: column;
+        color: #fb5;
+        flex-wrap: wrap;
+        font-size: 2rem;
+        align-items: center;
+        text-align: justify;
+    }
+    
+    table td {
+        padding: .5rem;
+    }
