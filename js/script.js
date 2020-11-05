@@ -74,7 +74,7 @@ btnMais.forEach((item) => {
 })
 
 function adicionar(event) {
-    console.log('oiiiii')
+    console.log('Adicionou')
 }
 
 const btnMenos = document.querySelectorAll('li .btnMenos');
@@ -84,5 +84,5 @@ btnMenos.forEach((item) => {
 })
 
 function remover(event) {
-    console.log('oi')
+    console.log('Removeu')
 }

@@ -16,7 +16,6 @@
     }
     
     .modal {
-        width: 80%;
         min-width: 300px;
         background: black;
         padding: 40px;
@@ -84,14 +83,14 @@
     }
     
     .modal h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: #fb5;
         font-weight: bold;
         text-align: center;
     }
     
     .lista {
-        width: 100%;
+        width: 80%;
         display: flex;
         padding: 1rem;
         align-items: center;
@@ -104,7 +103,7 @@
         height: 3rem;
         cursor: pointer;
         font-size: 2rem;
-        border-radius: 2px;
+        border-radius: 1px;
         color: #fb5;
         cursor: pointer;
         background: transparent;
