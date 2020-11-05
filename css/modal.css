@@ -74,8 +74,8 @@
         height: 50px;
         border-radius: 50%;
         position: absolute;
-        top: -30px;
-        right: -30px;
+        top: 6rem;
+        right: 10rem;
         box-shadow: 0 4px 4px 0 regba(0, 0, 0, .3);
         font-size: 2rem;
         color: black;
@@ -120,4 +120,9 @@
         background: #fb5;
         color: black;
         font-weight: bold;
+    }
+    
+    li .imgs {
+        width: 4rem;
+        height: 4rem;
     }
