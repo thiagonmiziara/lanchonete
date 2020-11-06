@@ -24,7 +24,8 @@
         position: relative;
     }
     
-    .titulo-modal {
+    .titulo-modal,
+    h3 {
         font-size: 4rem;
         color: #fb5;
     }
@@ -41,12 +42,13 @@
         border: 2px solid #fb5;
     }
     
-    .container-flex {
+    .container-flex,
+    #total {
         display: flex;
-        font-size: 3rem;
+        font-size: 2rem;
         color: white;
         align-items: center;
-        margin: 1rem;
+        margin: 0.2rem;
     }
     
     .btn-confirmar:hover {
@@ -74,8 +76,8 @@
         height: 50px;
         border-radius: 50%;
         position: absolute;
-        top: 6rem;
-        right: 10rem;
+        top: -2.5rem;
+        right: -3rem;
         box-shadow: 0 4px 4px 0 regba(0, 0, 0, .3);
         font-size: 2rem;
         color: black;
@@ -89,12 +91,18 @@
         text-align: center;
     }
     
-    .lista {
+    #cardapio {
         width: 80%;
         display: flex;
         padding: 1rem;
         align-items: center;
         text-align: center;
+    }
+    
+    p,
+    b {
+        font-size: 2rem;
+        color: #fb5;
     }
     
     .btnMenos,
@@ -120,9 +128,4 @@
         background: #fb5;
         color: black;
         font-weight: bold;
-    }
-    
-    li .imgs {
-        width: 4rem;
-        height: 4rem;
     }

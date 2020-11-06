@@ -57,27 +57,59 @@ if (btnPedido && btnFecharModal && containerModal) {
     containerModal.addEventListener("click", cliqueForaModal);
 }
 
-const btnMais = document.querySelectorAll("li .btnMais");
-btnMais.forEach((item) => {
-    item.addEventListener("click", adicionar);
+
+const cardapioElement = document.getElementById('cardapio');
+const totalElement = document.getElementById('total');
+const carrinhoItemsListElement = document.getElementById('items');
+
+const cardapio = [
+    { name: 'X-salada', value: 10.00 },
+    { name: 'X-bacon', value: 15.00 },
+    { name: 'X-tudo', value: 25.00 },
+    { name: 'Suco', value: 7.5 },
+    { name: 'Refrigerante', value: 7.5 },
+];
+
+const carrinho = [];
+
+function atualizarCarrinho() {
+    carrinhoItemsListElement.innerHTML = '';
+    carrinho.forEach(item => {
+        const itemCarrinho = document.createElement('div');
+        itemCarrinho.classList.add('container-flex')
+        itemCarrinho.textContent = `${item.name} - R$ ${item.value},00`;
+        carrinhoItemsListElement.appendChild(itemCarrinho);
+    });
+    const total = carrinho.length ? carrinho.reduce((a, b) => ({ value: a.value + b.value })).value : 0;
+    totalElement.textContent = `${total},00`;
+}
+
+
+function addItem(novoItem) {
+    carrinho.push(novoItem);
+    atualizarCarrinho();
+}
+
+function removeItem(itemParaRemover) {
+    const itemNoCarrinho = carrinho.find(item => item.name === itemParaRemover.name);
+    const idexOfItem = carrinho.indexOf(itemNoCarrinho);
+    if (idexOfItem > -1) carrinho.splice(idexOfItem, 1);
+    atualizarCarrinho();
+}
+
+cardapio.forEach(item => {
+    const btnItemAdd = document.createElement('button');
+    btnItemAdd.textContent = "+";
+    btnItemAdd.classList.add('btnMais')
+    btnItemAdd.onclick = () => addItem({...item });
+    const btnItemSub = document.createElement('button');
+    btnItemSub.textContent = "-";
+    btnItemSub.classList.add('btnMenos')
+    btnItemSub.onclick = () => removeItem({...item });
+    const itemContainer = document.createElement('div');
+    itemContainer.classList.add('container-flex')
+    itemContainer.textContent = item.name;
+    itemContainer.appendChild(btnItemAdd);
+    itemContainer.appendChild(btnItemSub);
+    cardapioElement.appendChild(itemContainer);
 });
-
-function adicionar(event) {
-    console.log("Adicionou");
-}
-
-const btnMenos = document.querySelectorAll("li .btnMenos");
-btnMenos.forEach((item) => {
-    item.addEventListener("click", remover);
-});
-
-function remover(event) {
-    console.log("Removeu");
-}
-
-const btnConfirmar = $('.btn-confirmar');
-btnConfirmar.addEventListener('click', confirmou);
-
-function confirmou() {
-    alert('Pedido enviado com sucesso!!')
-}
